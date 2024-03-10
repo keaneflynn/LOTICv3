@@ -1,5 +1,6 @@
-ultralytics==8.0.78
-scikit-learn==0.21.1
-tensorflow==2.11.0
-scikit-image==0.19.3
-filterpy==1.4.5
+numpy==1.24.1
+numpy==1.21.5
+opencv_python==4.5.5.64
+pyrealsense2==2.54.2.5684
+torch==2.0.1+cu118
+ultralytics==8.0.151
