@@ -9,7 +9,6 @@ from frameImport import *
 from output import videoOutput
 from lotic_signal import LoticSignal
 
-
 def main():
     parser = ArgumentParser(description='LOTICv2')
     parser.add_argument('video_source', type=str, help='identify your video source, using "realsense" will result in use with realsense camera')
@@ -76,9 +75,7 @@ def main():
             if frame is None:
                 break
         
-
         classes, scores, boxes = od.detection(frame) #performs object detection on individual frame from method in cv2 library
-        
 
         if args.video_source == 'realsense':
             tracked_fish, evicted_fish = ot.update_tracker(classes, scores, boxes, frame, depth_frame, video_info[1]) #object tracker (shoutout Jack) that updates output from object detection and can track individuals across a series of frames
